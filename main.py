@@ -39,7 +39,7 @@ def respond(voice_data):
         webbrowser.get().open(url)
         alexis_speak('Here is what i found for '+search)
 
-    if 'location' in voice_data:
+    if 'injection' in voice_data:
         center = record_audio("Which area are you looking for?")
         url = 'https://www.google.com/search?rlz=1C1VDKB_enIN945IN945&tbs=lf:1&tbm=lcl&sxsrf=ALeKk033XGAPOmlWIYIWVucFGcZq8NQKiA:1620065867973&q=google+map+for+vaccine+centres+in+'+center+'&rflfq=1&num=10&ved=2ahUKEwjswsrUj67wAhV37HMBHVthA8cQtgN6BAgWEAo'
         webbrowser.get().open(url)
@@ -85,9 +85,9 @@ def alexis_speak(audio_string):
 time.sleep(1)
 day_time = int(strftime('%H'))
 if day_time < 12:
-    alexis_speak('Good morning,My name is Alexis')
+    alexis_speak('Good morning,My name is Alexis ')
 elif 12 <= day_time < 18:
-    alexis_speak('Good afternoon,My name is Alexis')
+    alexis_speak('Good afternoon,My name is Alexis ')
 else:
     alexis_speak('Good evening,My name is Alexis')
 alexis_speak("How can I help you")

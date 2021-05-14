@@ -1,14 +1,15 @@
-import speech_recognition as sr
+import speech_recognition as sr # type: ignore
 from time import ctime
 import webbrowser
 import os
-import playsound
+import playsound # type: ignore
 import random
-from gtts import gTTS
+from gtts import gTTS # type: ignore
 import time
 from bs4 import BeautifulSoup
 import requests
 from time import strftime
+
 r = sr.Recognizer()
 
 def record_audio(ask=False):
